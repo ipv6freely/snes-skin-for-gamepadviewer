@@ -1,0 +1,171 @@
+/*  snes.css
+    Custom SNES CSS file for Gamepad Viewer
+    By: IPv6freely
+    Adapted from eseca's SNES skins on Github
+    https://github.com/eseca/custom-gamepadviewer-skins
+
+    To use:
+    - Go to gamepadviewer.com
+    - Select Remap Buttons
+    - Map buttons as appropriate. L and R should be mapped to LB and RB
+    - Select Generate Custom URL
+    - Enter the URL to this CSS file into the Custom CSS URL field
+    - Copy and paste the URL
+    - In OBS, create a new Browser source. Paste the URL.
+    - Enjoy!
+
+
+/* Define base controller sizing */
+.controller.custom{
+    background: url(snes.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 970px;
+    height: 424px;
+    margin-left: -485px;
+    margin-top: -212px;
+}
+.custom.disconnected {
+    background: url(snes.svg);
+    background-position: 0px -424px;
+    background-repeat: no-repeat;
+}
+.custom.disconnected div {
+    display: none;
+}
+
+/* SNES D-Pad */
+.custom .dpad{
+    position: absolute;
+    width: 146px;
+    height: 146px;
+    top: 142px;
+    left: 133px;
+}
+.custom .face{
+    position: absolute;
+}
+.custom .face.up, .custom .face.down{
+    width: 33.5px;
+    height: 34px;
+}
+.custom .face.left, .custom .face.right{
+    width: 34px;
+    height: 33.5px;
+}
+.custom .face.up{
+    left: 56px;
+    top: 0;
+    background-position: 92px 0px;
+}
+.custom .face.down{
+    left: 56px;
+    top: 112px;
+    background-position: 131px 0;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.custom .face.left{
+    top: 56px;
+    left: 0;
+    background-position: 0px 0;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.custom .face.right{
+    top: 56px;
+    right: 0px;
+    background-position: 53px 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.custom .face.pressed{
+    background: url(snes.svg);
+    background-position-x: -1323px;
+}
+
+
+/* SNES L and R Bumpers */
+.custom .bumpers{
+    width: 759px;
+    height: 34px;
+    position: absolute;
+    left: 104px;
+}
+.custom .bumper{
+    width: 211px;
+    height: 34px;
+    background: url(snes.svg);
+    background-position: -967px 0px;
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+.custom .bumper.pressed{
+    opacity: 1;
+}
+.custom .bumper.left{
+    float: left;
+}
+.custom .bumper.right{
+    float: right;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/*  SNES Start and Select Buttons
+    SELECT = .back
+    START = .start
+*/
+.custom .arrows{
+    position: absolute;
+    width: 176px;
+    height: 62px;
+    top: 214px;
+    left: 358px;
+}
+.custom .back, .custom .start{
+    width: 71.5px;
+    height: 61.5px;
+}
+.custom .back.pressed, .custom .start.pressed{
+    background: url(snes.svg);
+    background-position: -1177.5px 0px;
+}
+.custom .back{
+    float: left;
+}
+.custom .start{
+    float: right;
+}
+
+/* SNES ABXY Buttons */
+.custom .abxy{
+    position: absolute;
+    width: 259px;
+    height: 218px;
+    top: 105px;
+    left: 633px;
+}
+.custom .button{
+    position: absolute;
+    width:75px;
+    height:75px;
+}
+.custom .button.pressed{
+    background: url(snes.svg);
+    background-position-x: -1249px;
+}
+.custom .b{
+    top: 71px;
+    right: 0px;
+}
+.custom .a{
+    top: 143px;
+    left: 92px;
+}
+.custom .y{
+    left: 92px;
+}
+.custom .x{
+    top: 71px;
+}
